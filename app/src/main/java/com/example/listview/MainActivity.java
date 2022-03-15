@@ -12,32 +12,31 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
 {
-    // элементы списка которые будут в него внесены
-    String[] colors = { "Красный", "Оранжевый", "Желтый", "Зелёный", "Голубой", "Синий", "Фиолетовый"};
 
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String[] colors =getResources().getStringArray(R.array.cat_names);
 
         // Связываемся с ListView
-        ListView list = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // создаем адаптер
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_list_item_1, colors);
 
         // устанавливаем адаптер списку
-        list.setAdapter(adapter);
+        listView.setAdapter(adapter);
 
         // Обработка события на клик по элементу списка
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
                 Toast.makeText(getApplicationContext(),
-                        ((TextView)view).getText(), Toast.LENGTH_LONG).show();
+                        ((TextView)view).getText(), Toast.LENGTH_SHORT).show();
             }
         });
     }
