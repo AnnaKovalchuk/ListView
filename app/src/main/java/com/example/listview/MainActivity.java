@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onCreate(Bundle savedInstanceState)
-    {
+    {//
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         String[] colors =getResources().getStringArray(R.array.cat_names);
