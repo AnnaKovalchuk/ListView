@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity
             {
                 Toast.makeText(getApplicationContext(),
                         ((TextView)view).getText(), Toast.LENGTH_LONG).show();
+                ((TextView)findViewById(R.id.text)).setText(((TextView)view).getText());
             }
         });
     }
