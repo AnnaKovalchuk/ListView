@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">ListView</string>
+    <string-array name="cat_names">
+        <item>Рыжий</item>
+        <item>Симба</item>
+        <item>Фиолетовый</item>
+        <item>Голубой</item>
+        <item>Зелёный</item>
+        <item>Желтый</item>
+        <item>Оранжевый</item>
+        <item>Красный</item>
+        <item>Синий</item>
+        <item>Салатовый</item>
+        <item>Пурпурный</item>
+        <item>Бирюзовый</item>
+    </string-array>
 </resources>
