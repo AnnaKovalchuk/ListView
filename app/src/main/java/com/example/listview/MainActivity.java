@@ -13,10 +13,10 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onCreate(Bundle savedInstanceState)
-    {//
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String[] colors =getResources().getStringArray(R.array.cat_names);
+        String[] colors = getResources().getStringArray(R.array.cat_names);
 
         // Связываемся с ListView
         ListView listView = findViewById(R.id.list);
@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity
         listView.setAdapter(adapter);
 
         // Обработка события на клик по элементу списка
-        listView.setOnItemClickListener((parent, view, position, id) -> Toast.makeText(getApplicationContext(),
-                ((TextView)view).getText(), Toast.LENGTH_SHORT).show());
-    }
-}
+        listView.setOnItemClickListener((adapterView, view, i, l) -> {
+            ((TextView)findViewById(R.id.text)).setText(((TextView)view).getText());
+            Toast.makeText(getApplicationContext(),((TextView)view).getText(), Toast.LENGTH_SHORT).show();
+        });
+}}
